@@ -10,6 +10,7 @@
 ### Growing  / 学習中
 <p align="left">
   <img src="https://skillicons.dev/icons?i=react&theme=light" width="48" height="48" alt="React" />
+  <img src="https://skillicons.dev/icons?i=nestjs&theme=light" width="48" height="48" alt="NestJS" />
   <img src="https://skillicons.dev/icons?i=aws&theme=light" width="48" height="48" alt="AWS" />
   <img src="https://skillicons.dev/icons?i=spring&theme=light" width="48" height="48" alt="Spring Boot" />
   <img src="https://skillicons.dev/icons?i=figma&theme=light" width="48" height="48" alt="Figma" />
