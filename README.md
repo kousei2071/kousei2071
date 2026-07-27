@@ -1,10 +1,19 @@
-# Hi, I'm kousei tomita
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=220&section=header&text=I'm%20Kousei%20Tomita&fontSize=45&fontAlignY=30&fontAlign=left&fontAlignX=12&desc=Student%20engineer%20building%20web%20apps&descSize=18&descAlign=left&descAlignX=12&descAlignY=53&animation=fadeIn&fontColor=ffffff&descColor=E2E8F0" width="100%"/>
+</p>
 
-## About me
+# About me
+
+## English
 - Age 16
 - My bithday is December 7th
 - I am a student
 
+## 日本語
+- 16歳です
+- 12月7日生まれです
+- 私は学生です
+  
 ## Skills
 
 ### Frontend / フロントエンド
@@ -35,9 +44,5 @@
   <img src="https://skillicons.dev/icons?i=figma&theme=light" width="48" height="48" alt="Figma" />
   <img src="https://skillicons.dev/icons?i=github&theme=light" width="48" height="48" alt="GitHub" />
 </p>
-
-## Interests
-  I love music and would like to pursue a career in music in the future.<br>
-  I am interested in the IT field and am currently studying
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=kousei2071&theme=dark)](https://git.io/streak-stats)
