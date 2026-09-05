@@ -5,23 +5,21 @@
 # About me
 
 ## English
-- Based in Saitama, Japan  
-- Major: Engineering, KADOKAWA DWANGO Information Technology College  
-- Field: Web application development (frontend / backend)  
+
+- Based in Saitama, Japan
+- Major: Engineering, KADOKAWA DWANGO Information Technology College
+- Field: Web application development (frontend / backend)
 
 In my development work, I focus not only on making things function, but also on the reasoning behind my choice of tech stack and on designing UI/UX that enhances user convenience.
 
-
 ## 日本語
+
 - 拠点: 埼玉
-
 - 専攻: KADOKAWAドワンゴ情報工科学院 エンジニア専攻
-
 - 開発領域: Webアプリケーション（フロントエンド / バックエンド）
 
 開発では、単に動くものを作るのではなく、なぜその技術スタックを選ぶのかという選定理由と、ユーザーの利便性を高めるUI/UX設計を大切にしています。
 
-  
 ## Skills
 
 ### Frontend / フロントエンド
@@ -52,5 +50,21 @@ In my development work, I focus not only on making things function, but also on 
   <img src="https://skillicons.dev/icons?i=figma&theme=light" width="48" height="48" alt="Figma" />
   <img src="https://skillicons.dev/icons?i=github&theme=light" width="48" height="48" alt="GitHub" />
 </p>
+
+## Credentials
+
+### English
+
+- AWS Certified Cloud Practitioner (AWS CLF)
+  - Acquired: May 2026
+  - Summary: Certification that proves foundational knowledge of AWS Cloud and understanding of key AWS services.
+
+### 日本語
+
+- AWS Certified Cloud Practitioner (AWS CLF)
+  - 取得: 2026.05
+  - 概要: AWSクラウドの基礎知識と、主要サービスの利用に関する理解を証明する資格
+
+---
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=kousei2071&theme=dark)](https://git.io/streak-stats)
