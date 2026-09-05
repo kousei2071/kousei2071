@@ -5,14 +5,22 @@
 # About me
 
 ## English
-- Age 16
-- My bithday is December 7th
-- I am a student
+- Based in Saitama, Japan  
+- Major: Engineering, KADOKAWA DWANGO Information Technology College  
+- Field: Web application development (frontend / backend)  
+
+In my development work, I focus not only on making things function, but also on the reasoning behind my choice of tech stack and on designing UI/UX that enhances user convenience.
+
 
 ## 日本語
-- 16歳です
-- 12月7日生まれです
-- 私は学生です
+- 拠点: 埼玉
+
+- 専攻: KADOKAWAドワンゴ情報工科学院 エンジニア専攻
+
+- 開発領域: Webアプリケーション（フロントエンド / バックエンド）
+
+開発では、単に動くものを作るのではなく、なぜその技術スタックを選ぶのかという選定理由と、ユーザーの利便性を高めるUI/UX設計を大切にしています。
+
   
 ## Skills
 
