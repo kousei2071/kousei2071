@@ -6,7 +6,7 @@
 
 ## English
 
-- Based in Saitama, Japan
+- Based in Japan
 - Major: Engineering, KADOKAWA DWANGO Information Technology College
 - Field: Web application development (frontend / backend)
 
@@ -14,7 +14,7 @@ In my development work, I focus not only on making things function, but also on 
 
 ## 日本語
 
-- 拠点: 埼玉
+- 拠点: 日本
 - 専攻: KADOKAWAドワンゴ情報工科学院 エンジニア専攻
 - 開発領域: Webアプリケーション（フロントエンド / バックエンド）
 
