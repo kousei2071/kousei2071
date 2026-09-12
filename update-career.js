@@ -115,11 +115,11 @@ function daysBetween(start, end) {
 }
 
 /**
- * 実暦に基づく年・月・日の差分。
- * 存在しない日（1/31 + 1ヶ月など）は月末に丸める。
+ * 実暦に基づく年・日の差分。
+ * 存在しない日（1/31 + 1年など）は月末に丸める。
  * @param {CalendarDate} start
  * @param {CalendarDate} end
- * @returns {{ years: number, months: number, days: number }}
+ * @returns {{ years: number, days: number }}
  */
 function diffCalendar(start, end) {
   if (toOrdinal(end) < toOrdinal(start)) {
@@ -135,17 +135,9 @@ function diffCalendar(start, end) {
     afterYears = addMonths(start, years * 12);
   }
 
-  let months = (end.year - afterYears.year) * 12 + (end.month - afterYears.month);
-  let afterMonths = addMonths(afterYears, months);
-  if (toOrdinal(afterMonths) > toOrdinal(end)) {
-    months -= 1;
-    afterMonths = addMonths(afterYears, months);
-  }
-
   return {
     years,
-    months,
-    days: daysBetween(afterMonths, end),
+    days: daysBetween(afterYears, end),
   };
 }
 
@@ -167,11 +159,11 @@ function formatSlashDate(date) {
 
 /**
  * @param {CalendarDate} start
- * @param {{ years: number, months: number, days: number }} duration
+ * @param {{ years: number, days: number }} duration
  * @returns {string}
  */
 function formatCareerText(start, duration) {
-  return `エンジニア歴: ${duration.years}年${duration.months}ヶ月${duration.days}日（${formatSlashDate(start)} 開始）`;
+  return `エンジニア歴: ${duration.years}年${duration.days}日（${formatSlashDate(start)} 開始）`;
 }
 
 /**
@@ -188,7 +180,7 @@ function escapeXml(value) {
 
 /**
  * @param {CalendarDate} start
- * @param {{ years: number, months: number, days: number }} duration
+ * @param {{ years: number, days: number }} duration
  * @returns {string}
  */
 function renderCareerSvg(start, duration) {
@@ -198,13 +190,12 @@ function renderCareerSvg(start, duration) {
   const cream = "#FAF7F1";
   const black = "#111111";
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="56" viewBox="0 0 300 56" role="img" aria-label="${escapeXml(label)}">
-  <rect x="0.75" y="0.75" width="298.5" height="54.5" rx="10" fill="${cream}" stroke="${black}" stroke-width="1.5"/>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="260" height="56" viewBox="0 0 260 56" role="img" aria-label="${escapeXml(label)}">
+  <rect x="0.75" y="0.75" width="258.5" height="54.5" rx="10" fill="${cream}" stroke="${black}" stroke-width="1.5"/>
   <text x="18" y="34" fill="${black}" font-family="${font}" font-size="14" font-weight="600">エンジニア歴</text>
   <line x1="116" y1="17" x2="116" y2="39" stroke="${black}" stroke-width="1"/>
   <text x="130" y="35" fill="${black}" font-family="${font}">
     <tspan font-size="22" font-weight="700">${duration.years}</tspan><tspan font-size="13" dx="2">年</tspan>
-    <tspan font-size="22" font-weight="700" dx="8">${duration.months}</tspan><tspan font-size="13" dx="2">月</tspan>
     <tspan font-size="22" font-weight="700" dx="8">${duration.days}</tspan><tspan font-size="13" dx="2">日</tspan>
   </text>
 </svg>
@@ -217,7 +208,7 @@ function renderCareerSvg(start, duration) {
  * @returns {string}
  */
 function formatCareerImage(today, alt) {
-  return `<img src="./career-row.svg?d=${formatISODate(today)}" width="300" alt="${escapeXml(alt)}" />`;
+  return `<img src="./career-yd.svg?d=${formatISODate(today)}" width="260" alt="${escapeXml(alt)}" />`;
 }
 
 /**
@@ -253,7 +244,7 @@ function main() {
   const svg = renderCareerSvg(start, duration);
 
   const readmePath = path.join(__dirname, "README.md");
-  const svgPath = path.join(__dirname, "career-row.svg");
+  const svgPath = path.join(__dirname, "career-yd.svg");
   const readme = fs.readFileSync(readmePath, "utf8");
   const updated = replaceCareerSection(readme, image);
 
