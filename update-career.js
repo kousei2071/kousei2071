@@ -193,15 +193,20 @@ function escapeXml(value) {
  */
 function renderCareerSvg(start, duration) {
   const label = formatCareerText(start, duration);
+  const font =
+    "-apple-system,BlinkMacSystemFont,Segoe UI,Hiragino Sans,Noto Sans JP,sans-serif";
+  const cream = "#FAF7F1";
+  const black = "#111111";
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="280" height="72" viewBox="0 0 280 72" role="img" aria-label="${escapeXml(label)}">
-  <rect width="280" height="72" rx="10" fill="#111827"/>
-  <text x="52" y="38" text-anchor="middle" fill="#F8FAFC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="22" font-weight="700">${duration.years}</text>
-  <text x="52" y="56" text-anchor="middle" fill="#7DD3FC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11">年</text>
-  <text x="140" y="38" text-anchor="middle" fill="#F8FAFC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="22" font-weight="700">${duration.months}</text>
-  <text x="140" y="56" text-anchor="middle" fill="#A5B4FC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11">ヶ月</text>
-  <text x="228" y="38" text-anchor="middle" fill="#F8FAFC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="22" font-weight="700">${duration.days}</text>
-  <text x="228" y="56" text-anchor="middle" fill="#C4B5FD" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11">日</text>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="56" viewBox="0 0 300 56" role="img" aria-label="${escapeXml(label)}">
+  <rect x="0.75" y="0.75" width="298.5" height="54.5" rx="10" fill="${cream}" stroke="${black}" stroke-width="1.5"/>
+  <text x="18" y="34" fill="${black}" font-family="${font}" font-size="14" font-weight="600">エンジニア歴</text>
+  <line x1="116" y1="17" x2="116" y2="39" stroke="${black}" stroke-width="1"/>
+  <text x="130" y="35" fill="${black}" font-family="${font}">
+    <tspan font-size="22" font-weight="700">${duration.years}</tspan><tspan font-size="13" dx="2">年</tspan>
+    <tspan font-size="22" font-weight="700" dx="8">${duration.months}</tspan><tspan font-size="13" dx="2">月</tspan>
+    <tspan font-size="22" font-weight="700" dx="8">${duration.days}</tspan><tspan font-size="13" dx="2">日</tspan>
+  </text>
 </svg>
 `;
 }
@@ -212,7 +217,7 @@ function renderCareerSvg(start, duration) {
  * @returns {string}
  */
 function formatCareerImage(today, alt) {
-  return `<img src="./career-card.svg?d=${formatISODate(today)}" width="280" alt="${escapeXml(alt)}" />`;
+  return `<img src="./career-card.svg?d=${formatISODate(today)}&v=row" width="300" alt="${escapeXml(alt)}" />`;
 }
 
 /**
