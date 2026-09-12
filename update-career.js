@@ -212,7 +212,7 @@ function renderCareerSvg(start, duration) {
  * @returns {string}
  */
 function formatCareerImage(today, alt) {
-  return `<img src="./career.svg?d=${formatISODate(today)}&v=compact" alt="${escapeXml(alt)}" />`;
+  return `<img src="./career-card.svg?d=${formatISODate(today)}" alt="${escapeXml(alt)}" />`;
 }
 
 /**
@@ -248,7 +248,7 @@ function main() {
   const svg = renderCareerSvg(start, duration);
 
   const readmePath = path.join(__dirname, "README.md");
-  const svgPath = path.join(__dirname, "career.svg");
+  const svgPath = path.join(__dirname, "career-card.svg");
   const readme = fs.readFileSync(readmePath, "utf8");
   const updated = replaceCareerSection(readme, image);
 

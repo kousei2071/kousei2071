@@ -30,7 +30,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git diff
           if [ -n "$(git status --porcelain)" ]; then
-            git add README.md career.svg
+            git add README.md career-card.svg
             git commit -m "chore: update engineer career"
             git push
           fi
