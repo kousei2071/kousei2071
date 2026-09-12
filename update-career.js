@@ -212,7 +212,7 @@ function renderCareerSvg(start, duration) {
  * @returns {string}
  */
 function formatCareerImage(today, alt) {
-  return `<img src="./career.svg?d=${formatISODate(today)}" alt="${escapeXml(alt)}" />`;
+  return `<img src="./career.svg?d=${formatISODate(today)}&v=compact" alt="${escapeXml(alt)}" />`;
 }
 
 /**
