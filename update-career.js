@@ -175,6 +175,82 @@ function formatCareerText(start, duration) {
 }
 
 /**
+ * @param {string} value
+ * @returns {string}
+ */
+function escapeXml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+/**
+ * @param {{ years: number, months: number, days: number }} duration
+ * @returns {number}
+ */
+function totalYears(duration) {
+  return duration.years + duration.months / 12 + duration.days / 365;
+}
+
+/**
+ * @param {CalendarDate} start
+ * @param {{ years: number, months: number, days: number }} duration
+ * @returns {string}
+ */
+function renderCareerSvg(start, duration) {
+  const label = formatCareerText(start, duration);
+  const years = totalYears(duration);
+  const yearFraction = Math.min(1, (duration.months + duration.days / 30.4375) / 12);
+  const circumference = 2 * Math.PI * 28;
+  const dash = (yearFraction * circumference).toFixed(2);
+  const gap = circumference.toFixed(2);
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="495" height="160" viewBox="0 0 495 160" role="img" aria-label="${escapeXml(label)}">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="495" height="160" rx="12" fill="url(#bg)"/>
+  <rect x="0" y="0" width="495" height="4" rx="2" fill="url(#accent)"/>
+
+  <text x="24" y="36" fill="#94A3B8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="13">Career / エンジニア歴</text>
+  <text x="24" y="56" fill="#64748B" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11">${escapeXml(formatSlashDate(start))} 開始</text>
+
+  <text x="70" y="112" text-anchor="middle" fill="#F8FAFC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="36" font-weight="700">${duration.years}</text>
+  <text x="70" y="136" text-anchor="middle" fill="#38BDF8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="13">年</text>
+
+  <text x="198" y="112" text-anchor="middle" fill="#F8FAFC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="36" font-weight="700">${duration.months}</text>
+  <text x="198" y="136" text-anchor="middle" fill="#818CF8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="13">ヶ月</text>
+
+  <text x="326" y="112" text-anchor="middle" fill="#F8FAFC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="36" font-weight="700">${duration.days}</text>
+  <text x="326" y="136" text-anchor="middle" fill="#A78BFA" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="13">日</text>
+
+  <circle cx="430" cy="92" r="28" fill="none" stroke="#334155" stroke-width="6"/>
+  <circle cx="430" cy="92" r="28" fill="none" stroke="url(#accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="${dash} ${gap}" transform="rotate(-90 430 92)"/>
+  <text x="430" y="97" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12">${years.toFixed(1)}y</text>
+</svg>
+`;
+}
+
+/**
+ * @param {CalendarDate} today
+ * @param {string} alt
+ * @returns {string}
+ */
+function formatCareerImage(today, alt) {
+  return `<img src="./career.svg?d=${formatISODate(today)}" alt="${escapeXml(alt)}" />`;
+}
+
+/**
  * @param {string} readme
  * @param {string} text
  * @returns {string}
@@ -203,12 +279,16 @@ function main() {
   const today = todayInTimeZone(TIME_ZONE);
   const duration = diffCalendar(start, today);
   const text = formatCareerText(start, duration);
+  const image = formatCareerImage(today, text);
+  const svg = renderCareerSvg(start, duration);
 
   const readmePath = path.join(__dirname, "README.md");
+  const svgPath = path.join(__dirname, "career.svg");
   const readme = fs.readFileSync(readmePath, "utf8");
-  const updated = replaceCareerSection(readme, text);
+  const updated = replaceCareerSection(readme, image);
 
   fs.writeFileSync(readmePath, updated);
+  fs.writeFileSync(svgPath, svg);
   console.log(`updated: ${text}`);
 }
 
@@ -227,5 +307,7 @@ module.exports = {
   todayInTimeZone,
   diffCalendar,
   formatCareerText,
+  formatCareerImage,
+  renderCareerSvg,
   replaceCareerSection,
 };

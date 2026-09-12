@@ -23,7 +23,7 @@ In my development work, I focus not only on making things function, but also on 
 ## Career / エンジニア歴
 
 <!--ENGINEER_CAREER_START-->
-エンジニア歴: 1年5ヶ月11日（2025/04/01 開始）
+<img src="./career.svg?d=2026-09-12" alt="エンジニア歴: 1年5ヶ月11日（2025/04/01 開始）" />
 <!--ENGINEER_CAREER_END-->
 
 ## Skills
