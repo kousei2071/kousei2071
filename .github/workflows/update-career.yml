@@ -1,0 +1,36 @@
+name: Update Engineer Career
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 毎日 00:00 UTC（09:00 JST）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-career:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Update career text
+        run: node update-career.js
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git diff
+          if [ -n "$(git status --porcelain)" ]; then
+            git add README.md
+            git commit -m "chore: update engineer career"
+            git push
+          fi

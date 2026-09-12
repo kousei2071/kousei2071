@@ -20,6 +20,12 @@ In my development work, I focus not only on making things function, but also on 
 
 開発では、単に動くものを作るのではなく、なぜその技術スタックを選ぶのかという選定理由と、ユーザーの利便性を高めるUI/UX設計を大切にしています。
 
+## Career / エンジニア歴
+
+<!--ENGINEER_CAREER_START-->
+エンジニア歴: 1年5ヶ月11日（2025/04/01 開始）
+<!--ENGINEER_CAREER_END-->
+
 ## Skills
 
 ### Frontend / フロントエンド
