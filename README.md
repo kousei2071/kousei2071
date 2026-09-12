@@ -39,17 +39,20 @@ In my development work, I focus not only on making things function, but also on 
   <img src="https://skillicons.dev/icons?i=spring&theme=light" width="48" height="48" alt="Spring Boot" />
   <img src="https://skillicons.dev/icons?i=py&theme=light" width="48" height="48" alt="Python" />
   <img src="https://skillicons.dev/icons?i=django&theme=light" width="48" height="48" alt="Django" />
-  <img src="https://skillicons.dev/icons?i=postgres&theme=light" width="48" height="48" alt="PostgreSQL" />
-  <img src="https://skillicons.dev/icons?i=mysql&theme=light" width="48" height="48" alt="MySQL" />
 </p>
 
 ### Tools / ツール
 
 <p align="left">
   <img src="https://skillicons.dev/icons?i=aws&theme=light" width="48" height="48" alt="AWS" />
+  <img src="https://skillicons.dev/icons?i=vercel&theme=light" width="48" height="48" alt="Vercel" />
+  <img src="https://skillicons.dev/icons?i=supabase&theme=light" width="48" height="48" alt="Supabase" />
+  <img src="https://skillicons.dev/icons?i=postgres&theme=light" width="48" height="48" alt="PostgreSQL" />
+  <img src="https://skillicons.dev/icons?i=mysql&theme=light" width="48" height="48" alt="MySQL" />
   <img src="https://skillicons.dev/icons?i=figma&theme=light" width="48" height="48" alt="Figma" />
   <img src="https://skillicons.dev/icons?i=github&theme=light" width="48" height="48" alt="GitHub" />
 </p>
+
 
 <!--ENGINEER_CAREER_START-->
 <img src="./career-yd.svg?d=2026-09-12" width="260" alt="エンジニア歴: 1年164日（2025/04/01 開始）" />
