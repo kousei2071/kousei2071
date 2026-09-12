@@ -20,12 +20,6 @@ In my development work, I focus not only on making things function, but also on 
 
 開発では、単に動くものを作るのではなく、なぜその技術スタックを選ぶのかという選定理由と、ユーザーの利便性を高めるUI/UX設計を大切にしています。
 
-## Career / エンジニア歴
-
-<!--ENGINEER_CAREER_START-->
-<img src="./career.svg?d=2026-09-12" alt="エンジニア歴: 1年5ヶ月11日（2025/04/01 開始）" />
-<!--ENGINEER_CAREER_END-->
-
 ## Skills
 
 ### Frontend / フロントエンド
@@ -56,6 +50,10 @@ In my development work, I focus not only on making things function, but also on 
   <img src="https://skillicons.dev/icons?i=figma&theme=light" width="48" height="48" alt="Figma" />
   <img src="https://skillicons.dev/icons?i=github&theme=light" width="48" height="48" alt="GitHub" />
 </p>
+
+<!--ENGINEER_CAREER_START-->
+<img src="./career.svg?d=2026-09-12" alt="エンジニア歴: 1年5ヶ月11日（2025/04/01 開始）" />
+<!--ENGINEER_CAREER_END-->
 
 ## Credentials
 
