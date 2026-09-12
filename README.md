@@ -52,7 +52,7 @@ In my development work, I focus not only on making things function, but also on 
 </p>
 
 <!--ENGINEER_CAREER_START-->
-<img src="./career-card.svg?d=2026-09-12&v=row" width="300" alt="エンジニア歴: 1年5ヶ月11日（2025/04/01 開始）" />
+<img src="./career-row.svg?d=2026-09-12" width="300" alt="エンジニア歴: 1年5ヶ月11日（2025/04/01 開始）" />
 <!--ENGINEER_CAREER_END-->
 
 ## Credentials
