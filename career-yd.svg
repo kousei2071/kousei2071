@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="260" height="56" viewBox="0 0 260 56" role="img" aria-label="エンジニア歴: 1年166日（2025/04/01 開始）">
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="56" viewBox="0 0 260 56" role="img" aria-label="エンジニア歴: 1年167日（2025/04/01 開始）">
   <rect x="0.75" y="0.75" width="258.5" height="54.5" rx="10" fill="#FAF7F1" stroke="#111111" stroke-width="1.5"/>
   <text x="18" y="34" fill="#111111" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Hiragino Sans,Noto Sans JP,sans-serif" font-size="14" font-weight="600">エンジニア歴</text>
   <line x1="116" y1="17" x2="116" y2="39" stroke="#111111" stroke-width="1"/>
   <text x="130" y="35" fill="#111111" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Hiragino Sans,Noto Sans JP,sans-serif">
     <tspan font-size="22" font-weight="700">1</tspan><tspan font-size="13" dx="2">年</tspan>
-    <tspan font-size="22" font-weight="700" dx="8">166</tspan><tspan font-size="13" dx="2">日</tspan>
+    <tspan font-size="22" font-weight="700" dx="8">167</tspan><tspan font-size="13" dx="2">日</tspan>
   </text>
 </svg>
