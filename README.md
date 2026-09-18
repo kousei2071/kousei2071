@@ -55,7 +55,7 @@ In my development work, I focus not only on making things function, but also on 
 
 
 <!--ENGINEER_CAREER_START-->
-<img src="./career-yd.svg?d=2026-09-17" width="260" alt="エンジニア歴: 1年169日（2025/04/01 開始）" />
+<img src="./career-yd.svg?d=2026-09-18" width="260" alt="エンジニア歴: 1年170日（2025/04/01 開始）" />
 <!--ENGINEER_CAREER_END-->
 
 ## Credentials
